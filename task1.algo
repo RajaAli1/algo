@@ -1,0 +1,6 @@
+ALGORITHM permutation
+VAR
+    x:INTEGER; y:INTEGER; z:INTEGER; Temp:INTEGER;
+BEGIN
+    Temp:=x; x:=y; y:=z; z:=Temp;
+END

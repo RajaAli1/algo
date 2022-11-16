@@ -1,0 +1,60 @@
+ALGORITHM Date
+VAR
+    date:INTEGER;
+    month:INTEGER;
+BEGIN
+
+ WRITE ("Input the date")
+    READ (date)
+
+
+
+
+
+
+ READ("Input Month");
+   WRITE(month);
+   switch(month) Do
+	case 1:
+	       WRITE("January");
+	       break;
+	case 2:
+	       WRITE("February");
+	       break;
+	case 3:
+	       WRITE("March");
+	       break;
+          
+     case 4:
+           WRITE("April");
+	       break;
+	case 5:
+	       WRITE("May");
+	       break;
+	case 6:
+	        WRITE("June");
+	       break;
+	case 7:
+	        WRITE("July");
+	       break;
+	case 8:
+	       WRITE("August");
+	       break;
+	case 9:
+	        WRITE("September");
+	       break;
+	case 10: 
+            WRITE("October");
+	       break;
+	case 11:
+	        WRITE("November");
+	       break;
+	case 12:
+	        WRITE("December");
+	       break;
+	default:
+	       WRITE("invalid Month number");
+	       break;
+      END_SWITCH
+    
+END

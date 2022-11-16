@@ -1,0 +1,29 @@
+ALGORITHM CheckPoint
+
+VAR
+
+   ch:STRING;
+   i:INTEGER;
+   len:INTEGER:=0;
+   vowels:INTEGER:=0;
+
+BEGIN
+
+     WRITE ("Enter a line of string")
+     READ (ch)
+WHILE (ch[i]<> '.') DO
+    
+    FOR (i = 0; i < ch.length(); i++)  DO
+        IF (ch[i] =' ') THEN
+        len:= len +1 ;
+        WRITE("The length of the sentence is" +len)
+        END_IF
+    END_FOR
+    FOR (i = 0; i < ch.length(); i++)  DO
+    IF (ch[i] = 'a' OR ch[i] = 'e' OR ch[i] ='i' OR ch[i] ='o' OR ch[i] = 'u') THEN
+       vowels:= vowels +1 ;
+       WRITE("The number of vowels in the sentence is" +vowels)
+    END_IF
+    END_FOR
+ END_WHILE
+END

@@ -1,0 +1,34 @@
+ALGORITHM Car_rental
+VAR
+    nbk:FLOAT; nbd:INTEGER; costklm:FLOAT; costday:FLOAT;
+CONST 
+    r1:FLOAT:=0.7;
+    r2:FLOAT:=0.4;
+    r3:FLOAT:=0.2;
+    p_d:INTEGER:=100;
+    INS:FLOAT:=0.3;
+    VAT:FLOAT:=0.18;
+BEGIN
+    WRITE ("Type the total number of Kilometers")
+    READ (nbk)
+    IF (0<nbk<=100) THEN
+        costklm:=r1*nbk
+    ELSE_IF (101=<nbk<=1000) THEN
+        costklm:=r2*(nbk-100)+r1*100
+    ELSE
+        costklm:=r1*100+r2*900+r3*(nbk-1000)
+    END_IF
+    costklm:=costklm+costklm*VAT;
+
+    WRITE ("Type the total number of Days")
+    READ (nbd)
+    costday:=nbd*(p_d+INS);
+    costday:=costday+costday*VAT;
+
+    IF (costklm>costday) THEN
+        WRITE ("The best option is renting by Day")
+    ELSE
+        WRITE ("the best option is renting by Kilometer")
+    END_IF
+
+END
